@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+
+    <div class="form-div" id="vue_app">
+        <div class="col-md-9 kirmizi">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" class="form-control input-lg ust25" name="adsoyad" v-model="contact.fullName" placeholder="Adiniz Soyadiniz">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control input-lg ust25" name="eposta" v-model="contact.email" placeholder="E - posta">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control input-lg ust25" name="telefonno" v-model="contact.phone" placeholder="Telefon">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mavi">
+            <button class="analiz" type="submit" v-on:click="sendMail" name="analiz"><i class="fa fa-sign-out" aria-hidden="true"></i> ÜCRETSÝZ ANALÝZ</button>
+        </div>
+    </div>
+
+
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- production version, optimized for size and speed -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+
+    
+    <script src="smtp.js"></script>
+    <script src="js-for-vue.js"></script>
+
+</body>
+</html>
